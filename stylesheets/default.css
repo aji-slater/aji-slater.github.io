@@ -1,1 +1,31 @@
+<<<<<<< HEAD
 no-marg
+=======
+
+
+.debug {
+  border: 1px solid red;
+}
+
+.bg-fog { background-color: gray }
+
+.p-zero { padding: 0px }
+.p-sm { padding: .5em;}
+
+.fl-l { float: left; }
+.fl-r { float: right; }
+.center { margin-left: auto; margin-right: auto; }
+.align-r { margin-left: auto;}
+.align-l { margin-right: auto;}
+
+.clearfix { overflow: auto; }
+
+.wide { width: 100% ;}
+.wth-m { width: 50%;}
+.wth-lrg { width: 75%; }
+
+.inline { display: inline-block; }
+
+.no-marg { margin: 0; }
+
+>>>>>>> 65771b554af52a58ae07b42362e5c5f5ea6128f3
