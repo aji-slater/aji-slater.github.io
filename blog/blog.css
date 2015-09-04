@@ -1,0 +1,15 @@
+body {
+  background-color: black;
+  color: gray;
+}
+
+h1, h2, h4 {
+  color: white;
+}
+
+div.window {
+  width: 75%;
+  margin-left: 10px;
+  font-family: courier;
+  color: #33cc33;
+}
