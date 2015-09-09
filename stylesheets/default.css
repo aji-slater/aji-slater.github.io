@@ -2,6 +2,7 @@
 
 .debug { border: 1px solid red; }
 
+
 .bg-bar {
   /*background-image: url(../imgs/bar-back.gif);
   background-size: 100% 100%;*/
@@ -16,6 +17,7 @@
 }
 
 .bg-offwt { background-color: lightgray;}
+.bg-drk { background-color: #1A1A1A;}
 
 .jus-r { text-align: right;}
 
@@ -32,6 +34,7 @@
 .p-bot-m { padding-bottom: 1em; }
 .p-bot-sm { padding-bottom: .5em }
 
+.p-lt-l { padding-left: 2em; }
 
 .fl-l { float: left; }
 .fl-r { float: right; }
@@ -55,6 +58,7 @@
 .ht-buttn { height: 2.5em;}
 
 .ht-l { height: 6em;}
+.ht-xxl { height: 15em;}
 
 .inline-b { display: inline-block; }
 .inline { display: inline;}
@@ -67,6 +71,7 @@
 .marg-bot-sm { margin-bottom: .5em;}
 .marg-bot-m { margin-bottom: 1em;}
 .marg-r-m { margin-right: 1em;}
+.marg-l-m { margin-left: 1em;}
 .marg-article { margin-right: 23%; margin-left: 23%; margin-top: 2em; margin-bottom: 3em;}
 .marg-top-no {margin-top: 0;}
 
@@ -79,6 +84,7 @@
       FONTS AND TEXT
   ====================*/
 .Goog-font { font-family: 'Titillium Web', sans-serif; }
+.fnt-courier { font-family: courier, monospace;}
 
 .br { display: block; }
 .lh-m { line-height: .8em; }
@@ -97,6 +103,7 @@
 .txt-nd { text-decoration: none;}
 .txt-b {font-weight: bold;}
 .txt-blk {color: black;}
+.txt-grn {color: lime;}
 
 .link:hover { text-decoration: underline;}
 
@@ -107,6 +114,8 @@
   text-align: center;
   text-decoration: none;
 }
+
+.button:hover { background-color: #242D43; }
 
 .avatar-size { width: 6em; }
 
