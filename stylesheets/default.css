@@ -84,7 +84,7 @@
       FONTS AND TEXT
   ====================*/
 .Goog-font { font-family: 'Titillium Web', sans-serif; }
-.fnt-courier { font-family: courier, monospace;}
+.fnt-courier { font-family: courier, monospace; }
 
 .br { display: block; }
 .lh-m { line-height: .8em; }
@@ -92,18 +92,18 @@
 .lh-l { line-height: 1.75em; }
 .rel { position: relative; }
 
-.txt-sm { font-size: .6em;}
-.txt-m { font-size: 1.3em;}
-.txt-150p { font-size: 1.5em;}
+.txt-sm { font-size: .6em; }
+.txt-m { font-size: 1.3em; }
+.txt-150p { font-size: 1.5em; }
 .txt-l { font-size: 1.8em; }
 .txt-xl { font-size: 2.5em; }
 
 .txt-lt { color: #D9D9D9; }
-.txt-wt { color: white;}
-.txt-nd { text-decoration: none;}
-.txt-b {font-weight: bold;}
-.txt-blk {color: black;}
-.txt-grn {color: lime;}
+.txt-wt { color: white; }
+.txt-nd { text-decoration: none; }
+.txt-b {font-weight: bold; }
+.txt-blk {color: black; }
+.txt-grn {color: lime; }
 
 .link:hover { text-decoration: underline;}
 
