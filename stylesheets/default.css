@@ -46,7 +46,7 @@
 .wth-lrg { width: 70%; }
 .wth-article { width: 54%;}
 
-.ht-buttn { height: 2.5em;}
+.ht-buttn { height: 2em;}
 
 .ht-l { height: 6em;}
 .ht-xxl { height: 15em;}
@@ -66,6 +66,7 @@
 .marg-article { margin-right: 23%; margin-left: 23%; margin-top: 2em; margin-bottom: 3em;}
 .marg-top-no {margin-top: 0;}
 .marg-top-m {margin-top: 1em;}
+.marg-l-l {margin-left: 3em;}
 
 .center { margin: auto; }
 .align-r { margin-left: auto; }
@@ -98,6 +99,7 @@
 .txt-blk {color: black; }
 .txt-grn {color: lime; }
 .txt-just {text-align: justify;}
+.txt-lft {text-align: left;}
 
 
 .link:hover { text-decoration: underline;}
