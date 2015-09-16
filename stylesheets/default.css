@@ -2,24 +2,14 @@
 
 .debug { border: 1px solid red; }
 
+/*======================
+    BACKGROUNDS
+======================*/
 
-.bg-bar {
-  /*background-image: url(../imgs/bar-back.gif);
-  background-size: 100% 100%;*/
-  background-color: #0c162e;
-}
-
-
-.bg-bar-f {
-  background-color: #0c162e;
-  /*background-image: url(../imgs/bar-bot.gif);
-  background-size: 100% 100%;*/
-}
-
+.bg-bar { background-color: #210043; }
+.bg-bar-f { background-color: #210043; }
 .bg-offwt { background-color: lightgray;}
 .bg-drk { background-color: #1A1A1A;}
-
-.jus-r { text-align: right;}
 
 /*======================
     PADDING
@@ -39,6 +29,7 @@
 .fl-l { float: left; }
 .fl-r { float: right; }
 
+.p-auto { padding: auto; }
 
 .clearfix { overflow: auto; }
 
@@ -74,10 +65,12 @@
 .marg-l-m { margin-left: 1em;}
 .marg-article { margin-right: 23%; margin-left: 23%; margin-top: 2em; margin-bottom: 3em;}
 .marg-top-no {margin-top: 0;}
+.marg-top-m {margin-top: 1em;}
 
 .center { margin: auto; }
 .align-r { margin-left: auto; }
 .align-l { margin-right: auto; }
+.indent {margin-left: .5em;}
 
 
 /*======================
@@ -104,21 +97,34 @@
 .txt-b {font-weight: bold; }
 .txt-blk {color: black; }
 .txt-grn {color: lime; }
+.txt-just {text-align: justify;}
+
 
 .link:hover { text-decoration: underline;}
 
 .button {
   color: lightgray;
-  background-color: #0c162e;
+  background-color: #210043;
   font-size: 1.3em;
   text-align: center;
   text-decoration: none;
 }
 
-.button:hover { background-color: #242D43; }
+code {
+  color: white;
+  display: inline-block;
+  background-color: #16062C;
+  width: 80%;
+  font-family: monospace;
+  padding: .6em;
+  margin: auto;
+  padding-left: 2em;
+  text-align: left;
+}
+
+.button:hover { background-color: #2D0C58; }
 
 .avatar-size { width: 6em; }
-
 .avatar-shape {
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
