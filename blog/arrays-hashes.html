@@ -31,21 +31,53 @@
   <span>
 </center>
   <section>
+    <p class="txt-just">
+      Programs need ways to store information. Variables are objects which can store one piece of information, whether that is an integer, a floating point number, a boolean or a string.
+    </p>
+    <p class="txt-just">
+      Even more versatile than variables are arrays and hashes. Where variables are a single stored object, arrays and hashes are indexed lists of objects.
+    </p>
+    <p class="txt-just">
+      An array is identified by square brackets, with commas separating each object stored therein, and are held in variables. Each cell of the array is assigned an integer to identify it for quick and simple access. Be careful though, cells are labeled starting with 0 and not 1.
+    </p>
+      <center><code>my_array = [ "A string", 45, true, 3.14159 ]</code></center>
+    <p class="txt-just">
+      A hash is very similar to an array, but instead of being indexed simply with integers, the hash can be indexed with any kind of object you want. Although there are several methods, let's just take a look at one way we would create a simple hash.
+    </p>
+    <center><code>
+      eric_sogard = {"team": "The Oakland Athletics"}
+    </code></center>
     <p>
-      Your first paragraph goes here. I'm using Web 2.0 Ipsum to add content. Webtwo ipsum dolor sit amet, eskobo chumby doostang bebo. Nuvvo koofers oooooc voxy klout jaiku palantir flickr insala zinch napster oooj, airbnb mzinga vimeo yuntaa balihoo plickers whrrl edmodo appjet kippt. Yoono imvu hulu eduvant blekko imvu ebay voki napster skype, hipmunk zinch wesabe bubbli ning meebo bitly zlio. Fleck elgg ideeli disqus rovio zillow sifteo blyve jabber, bitly geni zoho foodzie qeyno twones klout jiglu, hipmunk jaiku balihoo plickers heekya eskobo yuntaa. Sococo whrrl plickers movity whrrl zinch voki nuvvo meebo, quora heroku unigo kno wufoo jibjab woopra, groupon yuntaa spock mzinga jumo meebo movity.
+Like other variables, a hash is first created by giving it a name to the left of an equals sign. In the example above, we've only defined one pair of values. The first entry is called the key, and the second the value. The ability to index information with more than just whole numbers opens up a whole host of possibilities for use.
+    </p>
+    <center><code>
+      eric_sogard[:team]
+    </code></center>
+    <p>
+      This is the syntax that is required to call a value from a hash based on its key. Much like you would call the value from an array with its index number, you can use a much more descriptive key with a hash. Think of the pairs like the stats on the back of a baseball card.
+    </p>
+    <center><code>
+      eric_sogard = Hash.new<br>
+        <span class="indent">eric_sogard["Team"] = "The Oakland Athletics"</span><br>
+        <span class="indent">eric_sogard["Position"] = "2B/SS"</span><br>
+        <span class="indent">eric_sogard["Nickname"] = "Nerd Power"</span><br>
+    </code></center>
+    <p>
+      Notice the new way that I entered the information into the hash. I began by using Hash.new to let ruby know to make an empty hash with the name eric_sogard. Each subsequent line is using very similar syntax as what we used to call the method in order to insert a value there.
     </p>
     <p>
-        Lijit groupon ning stypi eskobo blyve ning shopify oooooc, meebo groupon prezi ebay voxy bitly diigo. Spock ifttt skype hipmunk movity whrrl bebo oooj empressr, disqus insala palantir bitly dropio zimbra zinch oooooc etsy, klout spock insala quora omgpop trulia jibjab. Sifteo dogster ebay grockit geni scribd bitly ning unigo, plickers voki mzinga tumblr kaboodle mozy whrrl woopra udemy, foodzie joukuu elgg twitter shopify akismet rovio. Kosmix eduvant woopra dopplr balihoo ning bebo akismet, boxbe vimeo kosmix shopify zappos bitly geni loopt, qeyno disqus sococo squidoo wikia octopart.
+      It's important to remember that while hashes are more flexible and key/value pairing allows for more information that is more semantic to access; arrays are much more efficient to run.
     </p>
     <p>
-        Kazaa meevee eduvant gsnap movity kosmix kazaa klout jumo, trulia unigo groupon wakoopa spock knewton glogster heroku oooj, ning imvu appjet eskobo zillow twitter rovio. Glogster chegg voxy greplin dopplr voki foodzie xobni weebly odeo, sococo zynga knewton loopt palantir lala blyve tumblr blekko, twones akismet plaxo kippt meebo zillow zooomr insala. Oovoo imeem napster divvyshot zinch imeem voxy shopify, fleck kazaa zinch lanyrd boxbe joost wakoopa nuvvo, orkut elgg heekya sifteo scribd napster. Yammer yoono groupon dopplr cloudera nuvvo eduvant klout, voxy groupon disqus eduvant oooj greplin.
+      I hope you were able to learn something new from this brief introduction to container objects in Ruby. See you next time!
     </p>
+
 
       <!-- copy and paste as many sections as you want to add paragraphs -->
   </section>
-<nav class="wide">
+<nav class="wide marg-top-sm">
   <center>
-  <a href="#" class="txt-nd">
+  <a href="css-concepts.html" class="txt-nd">
     <div class="Goog-font button inline-b p-sm txt-nd marg-r-m">Previous</div>
   </a>
 
