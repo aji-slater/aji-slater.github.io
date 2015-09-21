@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<head>
+  <title>Come Together Right Now Ruby Tuesday</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../stylesheets/default.css">
+    <link rel="stylesheet" href="../stylesheets/blog.css">
+  <link href='https://fonts.googleapis.com/css?family=Titillium+Web:700' rel='stylesheet' type='text/css'>
+</head>
+
+<body class="no-marg p-zero bg-offwt">
+
+  <header class="wide bg-bar inline-b clearfix p-top-sm">
+<center>
+
+  <span class="inline-b p-sm align-r"><a href="http://aji-slater.github.io/"><img src="../imgs/avatar1.jpg" alt="" class="avatar-size bd-wt marg-bot-m bd-1px avatar-shape"></a></span>
+
+</center>
+</header>
+
+
+<main class="marg-article wth-article">
+  <h1 class="Goog-font txt-b marg-bot-sm txt-xl">Come Together Right Now, Ruby Tuesday</h1>
+  <h2 class="Goog-font no-marg">Or: Can't we all just get along?</h2>
+  <h4 class="Goog-font marg-top-no">9/21/2015</h4>
+
+<center>
+
+  <img src="../imgs/blog5.jpg" alt="How do you sort your collections?" class="wth-lrg center br">
+    <span class="txt-sm Goog-font align-r">
+    Image by <a href="https://www.flickr.com/photos/badgurl/" class="txt-blk txt-nd link">Dee Speed</a>
+  <span>
+</center>
+  <section>
+    <p>
+     Ruby has a vast library of gems and modules that are available for developers to use, but most used/useful are the modules that come bundled with Ruby in the first place. The mixin called "Enumberable" is indispensable for grouping, sorting and ordering data. But why needs to manipulate data? Oh yeah, everyone.
+    </p>
+    <p>
+      Let's take a look at an Enumerable method named Enumerable#group_by. You might have guessed by the name, this method is going to group elements of a collection by a parameter you define with a block of code. Let's take a look under the hood.
+    </p>
+    <center><code>
+      [1, 2, 3, 4, 5, 6].sort_by { |x| x % 3 }
+    </code></center>
+    <p>
+      First off, you see an array. That's the collection to which we are going to apply sort_by. That's done simply enough, like many other methods we type ".sort_by" to call the method on our array. Of course, you could call this method on all sorts of collections, even a range.
+    </p>
+    <p>
+      After the array and our method call, we see some curly braces. This is the parameter for the method, and will tell sort_by how to categorize our elements. First off, in between the vertical pipes is a variable name that will stand for the element being evaluated as we go through our block of code. After that follows the block that will be applied to each member of the array.
+    </p>
+    <p>
+      In this example, we are doing a modulo 3 calculation on the array. In this group of numbers ( 1-6 ), there are three possible outcomes to this equation, and sort_by will group the elements based on those outcomes. Let's take a look and see what this expression returns.
+    </p>
+    <center><code>
+      [1, 2, 3, 4, 5, 6].sort_by { |x| x % 3 }<br>
+      ==> { 0=>[3, 6], 1=>[1, 4], 2=>[2, 5] }
+    </code></center>
+    <p>
+      Woah, don't run the other way, let's take a look at this and find out what exactly is going on. Right off we have that 0, followed by the arrow which tells us that this is a hash. The results of our sort_by block are going to be the keys in the hash this method creates. Where do the elements of our array go? Into little nested arrays SORTED BY the method via the block. Easy, isn't it?
+    </p>
+    <p>
+      I hope you enjoyed our little foray into this Enumerable Adventure. I hope my slogging through Ruby has helped you in your Ruby adventure, too.
+    </p>
+
+      <!-- copy and paste as many sections as you want to add paragraphs -->
+  </section>
+<nav class="wide">
+  <center>
+  <a href="#" class="txt-nd">
+    <div class="Goog-font button inline-b p-sm txt-nd marg-r-m">Previous</div>
+  </a>
+
+  <a href="#">
+    <div class="Goog-font button inline-b txt-nd p-sm">
+      Next
+    </div>
+  </a>
+  </center>
+</nav>
+
+</main>
+
+
+
+<footer class="wide ft-bot bg-bar-f inline-b clearfix p-top-m ht-l">
+  <div class="outer-container">
+    <div class="inner-container">
+      <center>
+      <a href="mailto:aji.slater@gmail.com" class="link txt-lt Goog-font txt-nd txt-m center">Aji.Slater at Gmail</a>
+      </center>
+      <br>
+      <a href="https://www.linkedin.com/pub/christopher-slater/100/155/403" class="txt-lt Goog-font link txt-nd txt-m marg-r-m">
+        LinkedIN
+      </a>
+      <a href="https://twitter.com/AjiSlater" class="link txt-lt Goog-font txt-nd txt-m marg-r-m">
+        Twitter
+      </a>
+      <a href="https://github.com/aji-slater" class="link txt-lt Goog-font txt-nd txt-m">
+        GitHub
+      </a>
+    </div>
+  </div>
+</footer>
+</body>
+
