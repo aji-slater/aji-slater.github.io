@@ -39,8 +39,10 @@
 
 .wth-a { width:auto;}
 .wide { width: 100% ;}
+.wth-t { width: 15%;}
 .wth-xs { width: 1.5em;}
 .wth-sm { width: 20%;}
+.wth-btn { width: 35%;}
 .wth-m { width: 50%; }
 .wth-m1 { width: 45%;}
 .wth-lrg { width: 70%; }
@@ -59,7 +61,9 @@
         MARGINS
   ====================*/
 .no-marg { margin: 0; }
+.sm-marg { margin: .5em }
 
+.marg-bot-xs { margin-bottom: .25em;}
 .marg-bot-sm { margin-bottom: .5em;}
 .marg-bot-m { margin-bottom: 1em;}
 .marg-r-m { margin-right: 1em;}
@@ -101,9 +105,10 @@
 .txt-grn {color: lime; }
 .txt-just {text-align: justify;}
 .txt-lft {text-align: left;}
+.txt-rt {text-align: right;}
 
 
-.link:hover { text-decoration: underline;}
+
 
 .button {
   color: lightgray;
@@ -125,6 +130,7 @@ code {
   text-align: left;
 }
 
+.link:hover { text-decoration: underline;}
 .button:hover { background-color: #2D0C58; }
 
 .avatar-size { width: 6em; }
@@ -136,6 +142,6 @@ code {
 
 .ft-bot { position: relative; bottom: 0;}
 
-.outer-container { position: relative; left: 50%; float: left; clear: both; margin: 10px 0; text-align: left; }
+.outer-container { position: relative; left: 50%; float: left; clear: both; margin: 0; text-align: left; }
 
 .inner-container { position: relative; left: -50%; text-align: left; }
