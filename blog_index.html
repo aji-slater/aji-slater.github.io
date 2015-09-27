@@ -9,7 +9,7 @@
 
 
 <body class="no-marg p-zero bg-offwt">
-
+<container id="wrapper">
   <header class="wide bg-bar inline-b clearfix p-top-sm">
 <center>
 
@@ -26,40 +26,61 @@
 <center>
   <nav class="wth-lrg">
       <ul class="p-zero marg-bot-xs">
-        <a href="#"><li class="inline-b p-sm wth-t marg-bot-xs button Goog-font">Bio</li></a>
+        <a href="bio.html"><li class="inline-b p-sm wth-t marg-bot-xs button Goog-font">Bio</li></a>
         <a href="#"><li class="inline-b p-sm wth-t marg-bot-xs button Goog-font">Blogs</li></a>
-        <a href="#"><li class="inline-b p-sm wth-t marg-bot-xs button Goog-font">Projects</li></a>
-        <a href="#"><li class="inline-b p-sm wth-t marg-bot-xs button Goog-font">Resume</li></a>
-        <a href="#"><li class="inline-b p-sm wth-t marg-bot-xs button Goog-font">Contact</li></a>
+        <a href="projects.html"><li class="inline-b p-sm wth-t marg-bot-xs button Goog-font">Projects</li></a>
+        <a href="resume.html"><li class="inline-b p-sm wth-t marg-bot-xs button Goog-font">Resume</li></a>
+        <a href="contact.html"><li class="inline-b p-sm wth-t marg-bot-xs button Goog-font">Contact</li></a>
       </ul>
   </nav>
 
 
-<main class="wth-article debug">
+<main class="wth-article p-bot-sm">
 <!-- MAIN CODE HERE -->
 
-<section class="txt-lft debug clearfix">
-  <a href="#" class="">
-    <button class="wth-btn button sm-marg fl-l">
-    <h3>Bootcamp Begins Bremotely</h3>
-    </button>
+<section class="txt-lft clearfix">
+  <a href="blog/t1-git-blog.html" class="">
+    <div class="wth-btn button sm-marg link fl-l p-sm">
+    <h3 class="no-marg">Bootcamp Begins Bremotely</h3>
+    </div>
   </a>
-  <p class="txt-rt debug wth-a marg-r-m">
+  <p class="txt-lft wth-a marg-r-m">
     Blog one of week one of Phase 0 of Bootcamp. And thus, our adventure began. We cracked into the shell of our computers and stuck our hands into the gooey center that is the command line, and met our new best friend, Git.
   </p>
 </section>
 
-<section class="txt-rt debug clearfix">
-  <a href="#" class="">
-    <button class="wth-btn button sm-marg fl-r">
-    <h3>Real Developers Have Class</h3>
-    </button>
+<section class="txt-rt clearfix">
+  <a href="blog/css-concepts.html" class="">
+    <div class="wth-btn button sm-marg link fl-r p-sm">
+    <h3 class="no-marg">Real Developers Have Class</h3>
+    </div>
   </a>
-  <p class="txt-lft debug wth-a marg-l-m">
+  <p class="txt-rt wth-a marg-l-m">
     CSS is the design backbone of the World Wide Web. To really understand the way webpages are displayed in browsers, html is not the only code you need to be fluent in. This week, we took a look under the hood of the internet and got our hands dirty with CSS.
   </p>
 </section>
 
+<section class="txt-lft clearfix">
+  <a href="blog/arrays-hashes.html" class="">
+    <div class="wth-btn button sm-marg link p-sm fl-l">
+    <h3 class="no-marg">Ruby's Own Little Card Catalogues</h3>
+    </div>
+  </a>
+  <p class="txt-lft wth-a marg-r-m">
+There are a lot of ways to store information in Ruby, and choosing which is right for the situation you are in can make or break your application. This week we played with some of those containers, and began to learn how to manipulate them.
+  </p>
+</section>
+
+<section class="txt-rt clearfix">
+  <a href="blog/sort-by.html" class="">
+    <div class="wth-btn button sm-marg link p-sm fl-r">
+    <h3 class="no-marg">Come Together Right Now</h3>
+    </div>
+  </a>
+  <p class="txt-rt wth-a marg-l-m">
+    So we know arrays and hashes, we can iterate overthem a little, let's take a look at Array#sort. One of the powerful Enumerate methods, sort is a fairly easy to use tool.
+  </p>
+</section>
 
 
 </main>
@@ -83,7 +104,7 @@
     </div>
   </div>
 </footer>
-
+</container>
 </body>
 
 </html>
