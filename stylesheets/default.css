@@ -53,9 +53,11 @@
 
 .ht-l { height: 6em;}
 .ht-xxl { height: 15em;}
+.ht-m { height: 5-0%;}
 
 .inline-b { display: inline-block; }
 .inline { display: inline;}
+.wrapper { min-height: 100%;}
 
 /*======================
         MARGINS
@@ -73,6 +75,8 @@
 .marg-top-m {margin-top: 1em;}
 .marg-l-l {margin-left: 3em;}
 
+
+.marg-bot-foot { margin-bottom: 6em;}
 .center { margin: auto; }
 .align-r { margin-left: auto; }
 .align-l { margin-right: auto; }
@@ -116,6 +120,7 @@
   font-size: 1.3em;
   text-align: center;
   text-decoration: none;
+  font-family: 'Titillium Web', sans-serif;
 }
 
 code {
@@ -140,8 +145,14 @@ code {
     border-radius: 50%;
 }
 
-.ft-bot { position: relative; bottom: 0;}
+.
+
+.ft-bot { position: absolute; bottom: 0; left: 0; height: 6em;}
 
 .outer-container { position: relative; left: 50%; float: left; clear: both; margin: 0; text-align: left; }
 
 .inner-container { position: relative; left: -50%; text-align: left; }
+
+#wrapper { min-height: 100%; 
+  position: relative;
+  display: block;}
