@@ -53,7 +53,7 @@
 
 .ht-l { height: 6em;}
 .ht-xxl { height: 15em;}
-.ht-m { height: 5-0%;}
+.ht-m { height: 50%;}
 
 .inline-b { display: inline-block; }
 .inline { display: inline;}
@@ -74,7 +74,7 @@
 .marg-top-no {margin-top: 0;}
 .marg-top-m {margin-top: 1em;}
 .marg-l-l {margin-left: 3em;}
-
+.marg-bot-no {margin-bottom: 0;}
 
 .marg-bot-foot { margin-bottom: 6em;}
 .center { margin: auto; }
