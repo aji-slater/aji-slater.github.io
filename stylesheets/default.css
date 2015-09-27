@@ -145,9 +145,7 @@ code {
     border-radius: 50%;
 }
 
-.
-
-.ft-bot { position: absolute; bottom: 0; left: 0; height: 6em;}
+.ft-bot { bottom: 0; left: 0; }
 
 .outer-container { position: relative; left: 50%; float: left; clear: both; margin: 0; text-align: left; }
 
