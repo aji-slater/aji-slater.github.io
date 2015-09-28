@@ -81,6 +81,7 @@
 .align-r { margin-left: auto; }
 .align-l { margin-right: auto; }
 .indent {margin-left: .5em;}
+.indent_twice { margin-left: 1.5em;}
 
 
 /*======================
