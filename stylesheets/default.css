@@ -10,6 +10,7 @@
 .bg-bar-f { background-color: #210043; }
 .bg-offwt { background-color: lightgray;}
 .bg-drk { background-color: #1A1A1A;}
+.bg-grey { background-color: gray; }
 
 /*======================
     PADDING
@@ -48,6 +49,7 @@
 .wth-lrg { width: 70%; }
 .wth-article { width: 54%;}
 .wth-code { width: 60%;}
+.wth-rmndr { width: 80%; }
 
 .ht-buttn { height: 2em;}
 
