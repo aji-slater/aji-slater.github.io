@@ -1,83 +1,1510 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <title>Aji Slater</title>
-  <link rel="stylesheet" href="stylesheets/default.css">
-  <link href='https://fonts.googleapis.com/css?family=Titillium+Web:700' rel='stylesheet' type='text/css'>
+  <title>Active Record Cheatsheet</title>
+    <link rel="stylesheet" type="text/css" href="/css/aji-grid.css">
+  <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+
+  <link rel="stylesheet" type="text/css" href="/css/application.css">
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,600italic,900' rel='stylesheet' type='text/css'>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="js/application.js"></script>
+  <script src="js/window-resize.js"></script>
 </head>
+<body class="pd-no">
 
-
-<body class="no-marg p-zero bg-offwt">
-<container id="wrapper">
-
-<header class="wide bg-bar inline-b clearfix p-top-l">
-<center>
-
-  <span class="inline-b p-sm align-r"><img src="imgs/avatar1.jpg" alt="" class="avatar-size bd-wt bd-1px avatar-shape"></span>
-  <span class="inline-b p-sm p-bot-m">
-    <span class="lh-zero br txt-xl Goog-font txt-wt">
-      Aji Slater
-    </span>
-    <span class="lh-zero br txt-l Goog-font txt-lt p-bot-sm">
-      Developer, Designer, Content Creator
-    </span>
-  </span>
-  <span class="inline-b p-sm align-l">
-    <img src="imgs/avatar2.jpg" alt="" class="avatar-size avatar-shape">
-  </span>
-
-</center>
+<div class="begin-hidden bg-pu fx up-lt up-up wt-big ht-big pd-crn-m" id="floater">
+<header class="wide">
+<span class="fl-lt tc-wt th-sm" id="">For more information, click here.</span>
+<a class="fl-rt tc-wt th-sm" href="" id="close-iframe">close</a>
 </header>
-<center>
-<main class="clearfix">
-<section class="inline-b wth-lrg p-psm">
-  <section class="fl-l">
-    <h2 class="Goog-font text-m marg-top-no">
-      To The Head Of The Class
-    </h2>
-    <img src="imgs/blog7.jpg" alt="JavaScript book in front of a monitor" class="ht-xxl">
-    <br><span class="txt-sm Goog-font align-r">
-    Image by <a href="https://www.flickr.com/photos/nyuhuhuu/" class="txt-blk txt-nd link">Nyuhuhuu</a></span>
-    </section>
-      <aside class="inline-b wth-m clearfix marg-l-l">
-    <nav>
-      <ul class="p-zero">
-        <a href="bio.html"><li class="inline-b p-sm wth-lrg marg-bot-sm button Goog-font">Bio</li></a>
-        <a href="blog_index.html"><li class="inline-b p-sm wth-lrg marg-bot-sm button Goog-font">Blogs</li></a>
-        <a href="projects.html"><li class="inline-b p-sm wth-lrg marg-bot-sm button Goog-font">Projects</li></a>
-        <a href="resume.html"><li class="inline-b p-sm wth-lrg marg-bot-sm button Goog-font">Resume</li></a>
-        <a href="contact.html"><li class="inline-b p-sm wth-lrg marg-bot-sm button Goog-font">Contact</li></a>
-      </ul>
-    </nav>
-  </aside>
-    <p class="txt-lft">Maybe we got a little complacent with Ruby. Maybe we were introduced to a language that is so user friendly and included so many built-in straightforward methods so we could not have to worry about it at first and just learn how to talk to a computer. Maybe...</p>
-    <a href="blog/javascript.html" class="txt-lft">Read more</a>
-  </section>
-</main>
-</center>
-<div class="push"></div>
-</container>
+<iframe src="" class="bd-no wide tall"></iframe>
+</div>
 
-<footer class="wide ft-bot bg-bar-f clearfix p-top-m">
-  <div class="outer-container">
-    <div class="inner-container marg-top-m marg-bot-sm">
-      <center>
-      <a href="mailto:aji.slater@gmail.com" class="link txt-lt Goog-font txt-nd txt-m center">Aji.Slater at Gmail</a>
-      </center>
-      <br>
-      <a href="https://www.linkedin.com/pub/christopher-slater/100/155/403" class="txt-lt Goog-font link txt-nd txt-m marg-r-m">
-        LinkedIN
-      </a>
-      <a href="https://twitter.com/AjiSlater" class="link txt-lt Goog-font txt-nd txt-m marg-r-m">
-        Twitter
-      </a>
-      <a href="https://github.com/aji-slater" class="link txt-lt Goog-font txt-nd txt-m">
-        GitHub
-      </a>
+
+<header class="ov-hid fx wide bg-bl mn-wd-m ht-ml th-ml pd-xs box">
+<span class="tc-wt tx-g">Active Record Cheat Sheet</span>
+<span class="fl-rt tc-gy">
+<a href="" class="tc-wt navi activated" id="thisButton">this </a>
+<a href="" class="tc-gy navi" id="thatButton">that </a>
+<span class="tc-gy">or</span>
+<a href="" class="tc-gy navi" id="theOtherButton"> the other</a>
+</span>
+</header>
+<div class="bg-dg tall pd-tp-lg pd-bo-md" id="yield-wrapper">
+
+<div class="row">
+  <div class="col-1 spacer" id="centering-spacer-l"></div>
+  <div class="col-10" id="content-holder" name="1">
+
+
+  <article id="QueryMethods-title" class="bg-one heading pd-xs">
+    <span class="title th-ms"> ::QueryMethods </span>
+
+
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/Querying.html#method-i-count_by_sql" class="query"><div class="wrap wide bg-one-lt pd-lt-m th-sm"
+        style="padding-top: .3em;"
+
+      >
+        count_by_sql(sql)
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/QueryMethods.html#method-i-create_with" class="query"><div class="wrap wide bg-one-lt pd-lt-m th-sm"
+
+
+      >
+        create_with(value)
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/QueryMethods.html#method-i-distinct" class="query"><div class="wrap wide bg-one-lt pd-lt-m th-sm"
+
+
+      >
+        distinct
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/QueryMethods.html#method-i-eager_load" class="query"><div class="wrap wide bg-one-lt pd-lt-m th-sm"
+
+
+      >
+        eager_load
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/QueryMethods.html#method-i-extending" class="query"><div class="wrap wide bg-one-lt pd-lt-m th-sm"
+
+
+      >
+        extending
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/Querying.html#method-i-find_by_sql" class="query"><div class="wrap wide bg-one-lt pd-lt-m th-sm"
+
+
+      >
+        find_by_sql(sql)
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/QueryMethods.html#method-i-from" class="query"><div class="wrap wide bg-one-lt pd-lt-m th-sm"
+
+
+      >
+        from
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/QueryMethods.html#method-i-group" class="query"><div class="wrap wide bg-one-lt pd-lt-m th-sm"
+
+
+      >
+        group(*args)
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/QueryMethods.html#method-i-having" class="query"><div class="wrap wide bg-one-lt pd-lt-m th-sm"
+
+
+      >
+        having(opts)
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/QueryMethods.html#method-i-includes" class="query"><div class="wrap wide bg-one-lt pd-lt-m th-sm"
+
+
+      >
+        includes(*args)
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/QueryMethods.html#method-i-joins" class="query"><div class="wrap wide bg-one-lt pd-lt-m th-sm"
+
+
+      >
+        joins(*args)
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/QueryMethods.html#method-i-limit" class="query"><div class="wrap wide bg-one-lt pd-lt-m th-sm"
+
+
+      >
+        limit(value)
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/QueryMethods.html#method-i-lock" class="query"><div class="wrap wide bg-one-lt pd-lt-m th-sm"
+
+
+      >
+        lock
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/QueryMethods.html#method-i-none" class="query"><div class="wrap wide bg-one-lt pd-lt-m th-sm"
+
+
+      >
+        none
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/QueryMethods.html#method-i-offset" class="query"><div class="wrap wide bg-one-lt pd-lt-m th-sm"
+
+
+      >
+        offset(value)
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/QueryMethods.html#method-i-order" class="query"><div class="wrap wide bg-one-lt pd-lt-m th-sm"
+
+
+      >
+        order(*args)
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/QueryMethods.html#method-i-preload" class="query"><div class="wrap wide bg-one-lt pd-lt-m th-sm"
+
+
+      >
+        preload(*args)
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/QueryMethods.html#method-i-readonly" class="query"><div class="wrap wide bg-one-lt pd-lt-m th-sm"
+
+
+      >
+        readonly
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/QueryMethods.html#method-i-references" class="query"><div class="wrap wide bg-one-lt pd-lt-m th-sm"
+
+
+      >
+        references(table_name)
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/QueryMethods.html#method-i-reorder" class="query"><div class="wrap wide bg-one-lt pd-lt-m th-sm"
+
+
+      >
+        reorder(*args)
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/QueryMethods.html#method-i-reverse_order" class="query"><div class="wrap wide bg-one-lt pd-lt-m th-sm"
+
+
+      >
+        reverse_order
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/QueryMethods.html#method-i-rewhere" class="query"><div class="wrap wide bg-one-lt pd-lt-m th-sm"
+
+
+      >
+        rewhere(conditions)
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/QueryMethods.html#method-i-select" class="query"><div class="wrap wide bg-one-lt pd-lt-m th-sm"
+
+
+      >
+        select(*fields)
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/QueryMethods.html#method-i-uniq" class="query"><div class="wrap wide bg-one-lt pd-lt-m th-sm"
+
+
+      >
+        uniq
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/QueryMethods.html#method-i-unscope" class="query"><div class="wrap wide bg-one-lt pd-lt-m th-sm"
+
+
+      >
+        unscope
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/QueryMethods.html#method-i-where" class="query"><div class="wrap wide bg-one-lt pd-lt-m th-sm"
+
+        style="padding-bottom: .3em;"
+      >
+        where
+      </div></a></li>
+
+
+
+  </article>
+
+
+  <article id="Persistence-title" class="bg-two heading pd-xs">
+    <span class="title th-ms"> ::Persistence </span>
+
+
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/Persistence.html#method-i-becomes" class="query"><div class="wrap wide bg-two-lt pd-lt-m th-sm"
+        style="padding-top: .3em;"
+
+      >
+        becomes(klass)
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/Persistence.html#method-i-becomes-21" class="query"><div class="wrap wide bg-two-lt pd-lt-m th-sm"
+
+
+      >
+        becomes!(klass)
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/Persistence/ClassMethods.html#method-i-create" class="query"><div class="wrap wide bg-two-lt pd-lt-m th-sm"
+
+
+      >
+        create(attributes)
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/Persistence/ClassMethods.html#method-i-create-21" class="query"><div class="wrap wide bg-two-lt pd-lt-m th-sm"
+
+
+      >
+        create!(attributes)
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/Persistence.html#method-i-decrement" class="query"><div class="wrap wide bg-two-lt pd-lt-m th-sm"
+
+
+      >
+        decrement(attribute, by = 1)
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/Persistence.html#method-i-decrement-21" class="query"><div class="wrap wide bg-two-lt pd-lt-m th-sm"
+
+
+      >
+        decrement!(attribute, by = 1
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/Persistence.html#method-i-delete" class="query"><div class="wrap wide bg-two-lt pd-lt-m th-sm"
+
+
+      >
+        delete
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/Persistence.html#method-i-destroy" class="query"><div class="wrap wide bg-two-lt pd-lt-m th-sm"
+
+
+      >
+        destroy
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/Persistence.html#method-i-destroy" class="query"><div class="wrap wide bg-two-lt pd-lt-m th-sm"
+
+
+      >
+        destroy!
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/Persistence.html#method-i-destroyed-3F" class="query"><div class="wrap wide bg-two-lt pd-lt-m th-sm"
+
+
+      >
+        destroyed?
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/Persistence.html#method-i-increment" class="query"><div class="wrap wide bg-two-lt pd-lt-m th-sm"
+
+
+      >
+        incrememnt(attribute, by = 1)
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/Persistence.html#method-i-increment-21" class="query"><div class="wrap wide bg-two-lt pd-lt-m th-sm"
+
+
+      >
+        increment!(attribute, by = 1)
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/Persistence/ClassMethods.html#method-i-instantiate" class="query"><div class="wrap wide bg-two-lt pd-lt-m th-sm"
+
+
+      >
+        instantiate(attributes)
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/Persistence.html#method-i-new_record-3F" class="query"><div class="wrap wide bg-two-lt pd-lt-m th-sm"
+
+
+      >
+        new_record?
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/Persistence.html#method-i-persisted-3F" class="query"><div class="wrap wide bg-two-lt pd-lt-m th-sm"
+
+
+      >
+        persisted?
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/Persistence.html#method-i-reload" class="query"><div class="wrap wide bg-two-lt pd-lt-m th-sm"
+
+
+      >
+        reload(options)
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/Persistence.html#method-i-save" class="query"><div class="wrap wide bg-two-lt pd-lt-m th-sm"
+
+
+      >
+        save(*)
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/Persistence.html#method-i-save-21" class="query"><div class="wrap wide bg-two-lt pd-lt-m th-sm"
+
+
+      >
+        save!(*)
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/Persistence.html#method-i-toggle" class="query"><div class="wrap wide bg-two-lt pd-lt-m th-sm"
+
+
+      >
+        toggle(attribute)
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/Persistence.html#method-i-toggle-21" class="query"><div class="wrap wide bg-two-lt pd-lt-m th-sm"
+
+
+      >
+        toggle!(attribute)
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/Persistence.html#method-i-touch" class="query"><div class="wrap wide bg-two-lt pd-lt-m th-sm"
+
+
+      >
+        touch(*names)
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/Persistence.html#method-i-update" class="query"><div class="wrap wide bg-two-lt pd-lt-m th-sm"
+
+
+      >
+        update(attributes)
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/Persistence.html#method-i-update-21" class="query"><div class="wrap wide bg-two-lt pd-lt-m th-sm"
+
+
+      >
+        update!(attribute)
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/Persistence.html#method-i-update_attribute" class="query"><div class="wrap wide bg-two-lt pd-lt-m th-sm"
+
+
+      >
+        update_attribute(name, value)
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/Persistence.html#method-i-update_attributes" class="query"><div class="wrap wide bg-two-lt pd-lt-m th-sm"
+
+
+      >
+        update_attributes(attributes)
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/Persistence.html#method-i-update_attributes-21" class="query"><div class="wrap wide bg-two-lt pd-lt-m th-sm"
+
+
+      >
+        update_attributes!(attributes)
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/Persistence.html#method-i-update_column" class="query"><div class="wrap wide bg-two-lt pd-lt-m th-sm"
+
+
+      >
+        update_column(name, value)
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/Persistence.html#method-i-update_columns" class="query"><div class="wrap wide bg-two-lt pd-lt-m th-sm"
+
+        style="padding-bottom: .3em;"
+      >
+        update_columns(attributes)
+      </div></a></li>
+
+
+
+  </article>
+
+
+  <article id="Associations-title" class="bg-thr heading pd-xs">
+    <span class="title th-ms"> ::Associations </span>
+
+
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/Associations/ClassMethods.html#method-i-belongs_to" class="query"><div class="wrap wide bg-thr-lt pd-lt-m th-sm"
+        style="padding-top: .3em;"
+
+      >
+        belongs_to
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/Associations/ClassMethods.html#method-i-has_and_belongs_to_many" class="query"><div class="wrap wide bg-thr-lt pd-lt-m th-sm"
+
+
+      >
+        has_and_belongs_to_many
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/Associations/ClassMethods.html#method-i-has_many" class="query"><div class="wrap wide bg-thr-lt pd-lt-m th-sm"
+
+
+      >
+        has_many
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/Associations/ClassMethods.html#method-i-has_one" class="query"><div class="wrap wide bg-thr-lt pd-lt-m th-sm"
+
+        style="padding-bottom: .3em;"
+      >
+        has_one
+      </div></a></li>
+
+
+
+  </article>
+
+
+  <article id="FinderMethods-title" class="bg-fou heading pd-xs">
+    <span class="title th-ms"> ::FinderMethods </span>
+
+
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/FinderMethods.html#method-i-exists-3F" class="query"><div class="wrap wide bg-fou-lt pd-lt-m th-sm"
+        style="padding-top: .3em;"
+
+      >
+        exists?
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/FinderMethods.html#method-i-fifth" class="query"><div class="wrap wide bg-fou-lt pd-lt-m th-sm"
+
+
+      >
+        fifth
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/FinderMethods.html#method-i-fifth-21" class="query"><div class="wrap wide bg-fou-lt pd-lt-m th-sm"
+
+
+      >
+        fifth!
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/FinderMethods.html#method-i-find" class="query"><div class="wrap wide bg-fou-lt pd-lt-m th-sm"
+
+
+      >
+        find(*args)
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/FinderMethods.html#method-i-find_by" class="query"><div class="wrap wide bg-fou-lt pd-lt-m th-sm"
+
+
+      >
+        find_by(*args)
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/FinderMethods.html#method-i-find_by-21" class="query"><div class="wrap wide bg-fou-lt pd-lt-m th-sm"
+
+
+      >
+        find_by!(*args)
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/FinderMethods.html#method-i-find_last" class="query"><div class="wrap wide bg-fou-lt pd-lt-m th-sm"
+
+
+      >
+        find_last
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/FinderMethods.html#method-i-find_nth" class="query"><div class="wrap wide bg-fou-lt pd-lt-m th-sm"
+
+
+      >
+        find_nth(index, offset)
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/FinderMethods.html#method-i-find_nth-21" class="query"><div class="wrap wide bg-fou-lt pd-lt-m th-sm"
+
+
+      >
+        find_nth!(index)
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/FinderMethods.html#method-i-find_nth_with_limit" class="query"><div class="wrap wide bg-fou-lt pd-lt-m th-sm"
+
+
+      >
+        find_nth_with_limit(offset, limit
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/FinderMethods.html#method-i-find_one" class="query"><div class="wrap wide bg-fou-lt pd-lt-m th-sm"
+
+
+      >
+        find_one(id)
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/FinderMethods.html#method-i-find_some" class="query"><div class="wrap wide bg-fou-lt pd-lt-m th-sm"
+
+
+      >
+        find_some(id)
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/FinderMethods.html#method-i-find_take" class="query"><div class="wrap wide bg-fou-lt pd-lt-m th-sm"
+
+
+      >
+        find_take
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/FinderMethods.html#method-i-find_with_ids" class="query"><div class="wrap wide bg-fou-lt pd-lt-m th-sm"
+
+
+      >
+        find_with_ids(*ids)
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/FinderMethods.html#method-i-first" class="query"><div class="wrap wide bg-fou-lt pd-lt-m th-sm"
+
+
+      >
+        first
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/FinderMethods.html#method-i-first-21" class="query"><div class="wrap wide bg-fou-lt pd-lt-m th-sm"
+
+
+      >
+        first!
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/FinderMethods.html#method-i-forty_two" class="query"><div class="wrap wide bg-fou-lt pd-lt-m th-sm"
+
+
+      >
+        forty_two
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/FinderMethods.html#method-i-forty_two-21" class="query"><div class="wrap wide bg-fou-lt pd-lt-m th-sm"
+
+
+      >
+        forty_two!
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/FinderMethods.html#method-i-fourth" class="query"><div class="wrap wide bg-fou-lt pd-lt-m th-sm"
+
+
+      >
+        fourth
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/FinderMethods.html#method-i-fourth-21" class="query"><div class="wrap wide bg-fou-lt pd-lt-m th-sm"
+
+
+      >
+        fourth!
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/FinderMethods.html#method-i-last" class="query"><div class="wrap wide bg-fou-lt pd-lt-m th-sm"
+
+
+      >
+        last
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/FinderMethods.html#method-i-last-21" class="query"><div class="wrap wide bg-fou-lt pd-lt-m th-sm"
+
+
+      >
+        last!
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/FinderMethods.html#method-i-second" class="query"><div class="wrap wide bg-fou-lt pd-lt-m th-sm"
+
+
+      >
+        second
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/FinderMethods.html#method-i-second-21" class="query"><div class="wrap wide bg-fou-lt pd-lt-m th-sm"
+
+
+      >
+        second!
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/FinderMethods.html#method-i-take" class="query"><div class="wrap wide bg-fou-lt pd-lt-m th-sm"
+
+
+      >
+        take
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/FinderMethods.html#method-i-take-21" class="query"><div class="wrap wide bg-fou-lt pd-lt-m th-sm"
+
+
+      >
+        take!
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/FinderMethods.html#method-i-third" class="query"><div class="wrap wide bg-fou-lt pd-lt-m th-sm"
+
+
+      >
+        third
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/FinderMethods.html#method-i-third-21" class="query"><div class="wrap wide bg-fou-lt pd-lt-m th-sm"
+
+        style="padding-bottom: .3em;"
+      >
+        third!
+      </div></a></li>
+
+
+
+  </article>
+
+
+  <article id="Relation-title" class="bg-fiv heading pd-xs">
+    <span class="title th-ms"> ::Relation </span>
+
+
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/Relation.html#method-i-3D-3D" class="query"><div class="wrap wide bg-fiv-lt pd-lt-m th-sm"
+        style="padding-top: .3em;"
+
+      >
+        ==
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/Relation.html#method-i-any-3F" class="query"><div class="wrap wide bg-fiv-lt pd-lt-m th-sm"
+
+
+      >
+        any?
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/Relation.html#method-i-blank-3F" class="query"><div class="wrap wide bg-fiv-lt pd-lt-m th-sm"
+
+
+      >
+        blank?
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/Relation.html#method-i-build" class="query"><div class="wrap wide bg-fiv-lt pd-lt-m th-sm"
+
+
+      >
+        build(*args)
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/Relation.html#method-i-create" class="query"><div class="wrap wide bg-fiv-lt pd-lt-m th-sm"
+
+
+      >
+        create(*args)
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/Relation.html#method-i-create-21" class="query"><div class="wrap wide bg-fiv-lt pd-lt-m th-sm"
+
+
+      >
+        create!(*args)
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/Relation.html#method-i-delete" class="query"><div class="wrap wide bg-fiv-lt pd-lt-m th-sm"
+
+
+      >
+        delete(id)
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/Relation.html#method-i-delete_all" class="query"><div class="wrap wide bg-fiv-lt pd-lt-m th-sm"
+
+
+      >
+        delete_all
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/Relation.html#method-i-destroy" class="query"><div class="wrap wide bg-fiv-lt pd-lt-m th-sm"
+
+
+      >
+        destroy
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/Relation.html#method-i-destroy_all" class="query"><div class="wrap wide bg-fiv-lt pd-lt-m th-sm"
+
+
+      >
+        destroy_all
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/Relation.html#method-i-eager_loading-3F" class="query"><div class="wrap wide bg-fiv-lt pd-lt-m th-sm"
+
+
+      >
+        eager_loading?
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/Relation.html#method-i-empty-3F" class="query"><div class="wrap wide bg-fiv-lt pd-lt-m th-sm"
+
+
+      >
+        empty?
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/Relation.html#method-i-encode_with" class="query"><div class="wrap wide bg-fiv-lt pd-lt-m th-sm"
+
+
+      >
+        encode_with(encoder)
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/Relation.html#method-i-explain" class="query"><div class="wrap wide bg-fiv-lt pd-lt-m th-sm"
+
+
+      >
+        explain
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/Relation.html#method-i-find_or_create_by" class="query"><div class="wrap wide bg-fiv-lt pd-lt-m th-sm"
+
+
+      >
+        find_or_create_by(attributes, &block)
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/Relation.html#method-i-find_or_create_by-21" class="query"><div class="wrap wide bg-fiv-lt pd-lt-m th-sm"
+
+
+      >
+        find_or_create_by!(attributes, &block)
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/Relation.html#method-i-find_or_initialize_by" class="query"><div class="wrap wide bg-fiv-lt pd-lt-m th-sm"
+
+
+      >
+        find_or_initialize_by(attributes, &block)
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/Relation.html#method-i-initialize_copy" class="query"><div class="wrap wide bg-fiv-lt pd-lt-m th-sm"
+
+
+      >
+        initialize_copy(other)
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/Relation.html#method-i-inspect" class="query"><div class="wrap wide bg-fiv-lt pd-lt-m th-sm"
+
+
+      >
+        inspect
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/Relation.html#method-i-joined_includes_values" class="query"><div class="wrap wide bg-fiv-lt pd-lt-m th-sm"
+
+
+      >
+        joined_includes_variables
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/Relation.html#method-i-load" class="query"><div class="wrap wide bg-fiv-lt pd-lt-m th-sm"
+
+
+      >
+        load
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/Relation.html#method-i-many-3F" class="query"><div class="wrap wide bg-fiv-lt pd-lt-m th-sm"
+
+
+      >
+        many?
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/Relation.html#method-i-new" class="query"><div class="wrap wide bg-fiv-lt pd-lt-m th-sm"
+
+
+      >
+        new(*args, &block)
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/Relation.html#method-i-pretty_print" class="query"><div class="wrap wide bg-fiv-lt pd-lt-m th-sm"
+
+
+      >
+        pretty_print(q)
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/Relation.html#method-i-reload" class="query"><div class="wrap wide bg-fiv-lt pd-lt-m th-sm"
+
+
+      >
+        reload
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/Relation.html#method-i-reset" class="query"><div class="wrap wide bg-fiv-lt pd-lt-m th-sm"
+
+
+      >
+        reset
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/Relation.html#method-i-scope_for_create" class="query"><div class="wrap wide bg-fiv-lt pd-lt-m th-sm"
+
+
+      >
+        scpoe_for_create
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/Relation.html#method-i-scoping" class="query"><div class="wrap wide bg-fiv-lt pd-lt-m th-sm"
+
+
+      >
+        scoping
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/Relation.html#method-i-size" class="query"><div class="wrap wide bg-fiv-lt pd-lt-m th-sm"
+
+
+      >
+        size
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/Relation.html#method-i-to_a" class="query"><div class="wrap wide bg-fiv-lt pd-lt-m th-sm"
+
+
+      >
+        to_a
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/Relation.html#method-i-to_sql" class="query"><div class="wrap wide bg-fiv-lt pd-lt-m th-sm"
+
+
+      >
+        to_sql
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/Relation.html#method-i-uniq_value" class="query"><div class="wrap wide bg-fiv-lt pd-lt-m th-sm"
+
+
+      >
+        uniq_value
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/Relation.html#method-i-update" class="query"><div class="wrap wide bg-fiv-lt pd-lt-m th-sm"
+
+
+      >
+        update
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/Relation.html#method-i-update_all" class="query"><div class="wrap wide bg-fiv-lt pd-lt-m th-sm"
+
+
+      >
+        update_all(updates)
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/Relation.html#method-i-values" class="query"><div class="wrap wide bg-fiv-lt pd-lt-m th-sm"
+
+
+      >
+        values
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/Relation.html#method-i-where_values_hash" class="query"><div class="wrap wide bg-fiv-lt pd-lt-m th-sm"
+
+        style="padding-bottom: .3em;"
+      >
+        where_values_hash
+      </div></a></li>
+
+
+
+  </article>
+
+
+  <article id="ModelSchema-title" class="bg-six heading pd-xs">
+    <span class="title th-ms"> ::ModelSchema </span>
+
+
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/ModelSchema/ClassMethods.html#method-i-column_defaults" class="query"><div class="wrap wide bg-six-lt pd-lt-m th-sm"
+        style="padding-top: .3em;"
+
+      >
+        column_defaults
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/ModelSchema/ClassMethods.html#method-i-column_names" class="query"><div class="wrap wide bg-six-lt pd-lt-m th-sm"
+
+
+      >
+        column_names
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/ModelSchema/ClassMethods.html#method-i-content_columns" class="query"><div class="wrap wide bg-six-lt pd-lt-m th-sm"
+
+
+      >
+        content_columns
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/ModelSchema/ClassMethods.html#method-i-inheritance_column" class="query"><div class="wrap wide bg-six-lt pd-lt-m th-sm"
+
+
+      >
+        inheritence_column
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/ModelSchema/ClassMethods.html#method-i-inheritance_column-3D" class="query"><div class="wrap wide bg-six-lt pd-lt-m th-sm"
+
+
+      >
+        inheritence_column=(value)
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/ModelSchema/ClassMethods.html#method-i-quoted_table_name" class="query"><div class="wrap wide bg-six-lt pd-lt-m th-sm"
+
+
+      >
+        quoted_table_name
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/ModelSchema/ClassMethods.html#method-i-reset_column_information" class="query"><div class="wrap wide bg-six-lt pd-lt-m th-sm"
+
+
+      >
+        reset_column_information
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/ModelSchema/ClassMethods.html#method-i-sequence_name" class="query"><div class="wrap wide bg-six-lt pd-lt-m th-sm"
+
+
+      >
+        sequence_name
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/ModelSchema/ClassMethods.html#method-i-sequence_name-3D" class="query"><div class="wrap wide bg-six-lt pd-lt-m th-sm"
+
+
+      >
+        sequence_name=(value)
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/ModelSchema/ClassMethods.html#method-i-table_exists-3F" class="query"><div class="wrap wide bg-six-lt pd-lt-m th-sm"
+
+
+      >
+        table_exists?
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/ModelSchema/ClassMethods.html#method-i-table_name" class="query"><div class="wrap wide bg-six-lt pd-lt-m th-sm"
+
+
+      >
+        table_name
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/ModelSchema/ClassMethods.html#method-i-table_name-3D" class="query"><div class="wrap wide bg-six-lt pd-lt-m th-sm"
+
+        style="padding-bottom: .3em;"
+      >
+        table_name=(value)
+      </div></a></li>
+
+
+
+  </article>
+
+
+  <article id="SchemaStatments-title" class="bg-sev heading pd-xs">
+    <span class="title th-ms"> ::SchemaStatments </span>
+
+
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/ConnectionAdapters/SchemaStatements.html#method-i-add_belongs_to" class="query"><div class="wrap wide bg-sev-lt pd-lt-m th-sm"
+        style="padding-top: .3em;"
+
+      >
+        add_belongs_to
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/ConnectionAdapters/SchemaStatements.html#method-i-add_column" class="query"><div class="wrap wide bg-sev-lt pd-lt-m th-sm"
+
+
+      >
+        add_column
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/ConnectionAdapters/SchemaStatements.html#method-i-add_foreign_key" class="query"><div class="wrap wide bg-sev-lt pd-lt-m th-sm"
+
+
+      >
+        add_foreign_key
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/ConnectionAdapters/SchemaStatements.html#method-i-add_index" class="query"><div class="wrap wide bg-sev-lt pd-lt-m th-sm"
+
+
+      >
+        add_index
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/ConnectionAdapters/SchemaStatements.html#method-i-add_index_sort_order" class="query"><div class="wrap wide bg-sev-lt pd-lt-m th-sm"
+
+
+      >
+        add_index_sort_order
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/ConnectionAdapters/SchemaStatements.html#method-i-add_reference" class="query"><div class="wrap wide bg-sev-lt pd-lt-m th-sm"
+
+
+      >
+        add_reference
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/ConnectionAdapters/SchemaStatements.html#method-i-add_timestamps" class="query"><div class="wrap wide bg-sev-lt pd-lt-m th-sm"
+
+
+      >
+        add_timestamps
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/ConnectionAdapters/SchemaStatements.html#method-i-assume_migrated_upto_version" class="query"><div class="wrap wide bg-sev-lt pd-lt-m th-sm"
+
+
+      >
+        assume_migrated_upto_version
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/ConnectionAdapters/SchemaStatements.html#method-i-change_column" class="query"><div class="wrap wide bg-sev-lt pd-lt-m th-sm"
+
+
+      >
+        change_column
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/ConnectionAdapters/SchemaStatements.html#method-i-change_column_default" class="query"><div class="wrap wide bg-sev-lt pd-lt-m th-sm"
+
+
+      >
+        change_column_default
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/ConnectionAdapters/SchemaStatements.html#method-i-change_column_null" class="query"><div class="wrap wide bg-sev-lt pd-lt-m th-sm"
+
+
+      >
+        change_column_null
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/ConnectionAdapters/SchemaStatements.html#method-i-change_table" class="query"><div class="wrap wide bg-sev-lt pd-lt-m th-sm"
+
+
+      >
+        change_table
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/ConnectionAdapters/SchemaStatements.html#method-i-column_exists-3F" class="query"><div class="wrap wide bg-sev-lt pd-lt-m th-sm"
+
+
+      >
+        column_exists?
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/ConnectionAdapters/SchemaStatements.html#method-i-columns" class="query"><div class="wrap wide bg-sev-lt pd-lt-m th-sm"
+
+
+      >
+        columns
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/ConnectionAdapters/SchemaStatements.html#method-i-create_join_table" class="query"><div class="wrap wide bg-sev-lt pd-lt-m th-sm"
+
+
+      >
+        create_join_table
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/ConnectionAdapters/SchemaStatements.html#method-i-create_join_table" class="query"><div class="wrap wide bg-sev-lt pd-lt-m th-sm"
+
+
+      >
+        create_table
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/ConnectionAdapters/SchemaStatements.html#method-i-create_join_table" class="query"><div class="wrap wide bg-sev-lt pd-lt-m th-sm"
+
+
+      >
+        drop_join_table
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/ConnectionAdapters/SchemaStatements.html#method-i-drop_table" class="query"><div class="wrap wide bg-sev-lt pd-lt-m th-sm"
+
+
+      >
+        drop_table
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/ConnectionAdapters/SchemaStatements.html#method-i-foreign_keys" class="query"><div class="wrap wide bg-sev-lt pd-lt-m th-sm"
+
+
+      >
+        foreign_keys
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/ConnectionAdapters/SchemaStatements.html#method-i-index_exists-3F" class="query"><div class="wrap wide bg-sev-lt pd-lt-m th-sm"
+
+
+      >
+        index_exists?
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/ConnectionAdapters/SchemaStatements.html#method-i-index_name_exists-3F" class="query"><div class="wrap wide bg-sev-lt pd-lt-m th-sm"
+
+
+      >
+        index_name_exists?
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/ConnectionAdapters/SchemaStatements.html#method-i-index_name_for_remove" class="query"><div class="wrap wide bg-sev-lt pd-lt-m th-sm"
+
+
+      >
+        index_name_for_remove
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/ConnectionAdapters/SchemaStatements.html#method-i-initialize_schema_migrations_table" class="query"><div class="wrap wide bg-sev-lt pd-lt-m th-sm"
+
+
+      >
+        initialize_schema_migrations_table
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/ConnectionAdapters/SchemaStatements.html#method-i-native_database_types" class="query"><div class="wrap wide bg-sev-lt pd-lt-m th-sm"
+
+
+      >
+        native_database_types
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/ConnectionAdapters/SchemaStatements.html#method-i-options_include_default-3F" class="query"><div class="wrap wide bg-sev-lt pd-lt-m th-sm"
+
+
+      >
+        options_include_default?
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/ConnectionAdapters/SchemaStatements.html#method-i-quoted_columns_for_index" class="query"><div class="wrap wide bg-sev-lt pd-lt-m th-sm"
+
+
+      >
+        quoted_columns_for_index
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/ConnectionAdapters/SchemaStatements.html#method-i-remove_belongs_to" class="query"><div class="wrap wide bg-sev-lt pd-lt-m th-sm"
+
+
+      >
+        remove_belongs_to
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/ConnectionAdapters/SchemaStatements.html#method-i-remove_column" class="query"><div class="wrap wide bg-sev-lt pd-lt-m th-sm"
+
+
+      >
+        remove_column
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/ConnectionAdapters/SchemaStatements.html#method-i-remove_columns" class="query"><div class="wrap wide bg-sev-lt pd-lt-m th-sm"
+
+
+      >
+        remove_columns
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/ConnectionAdapters/SchemaStatements.html#method-i-remove_foreign_key" class="query"><div class="wrap wide bg-sev-lt pd-lt-m th-sm"
+
+
+      >
+        remove_foreign_key
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/ConnectionAdapters/SchemaStatements.html#method-i-remove_index" class="query"><div class="wrap wide bg-sev-lt pd-lt-m th-sm"
+
+
+      >
+        remove_index
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/ConnectionAdapters/SchemaStatements.html#method-i-remove_reference" class="query"><div class="wrap wide bg-sev-lt pd-lt-m th-sm"
+
+
+      >
+        remove_reference
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/ConnectionAdapters/SchemaStatements.html#method-i-remove_timestamps" class="query"><div class="wrap wide bg-sev-lt pd-lt-m th-sm"
+
+
+      >
+        remove_timestamps
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/ConnectionAdapters/SchemaStatements.html#method-i-rename_column" class="query"><div class="wrap wide bg-sev-lt pd-lt-m th-sm"
+
+
+      >
+        rename_column
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/ConnectionAdapters/SchemaStatements.html#method-i-rename_column_indexes" class="query"><div class="wrap wide bg-sev-lt pd-lt-m th-sm"
+
+
+      >
+        rename_column_indexes
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/ConnectionAdapters/SchemaStatements.html#method-i-rename_index" class="query"><div class="wrap wide bg-sev-lt pd-lt-m th-sm"
+
+
+      >
+        rename_index
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/ConnectionAdapters/SchemaStatements.html#method-i-rename_table" class="query"><div class="wrap wide bg-sev-lt pd-lt-m th-sm"
+
+
+      >
+        rename_table
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/ConnectionAdapters/SchemaStatements.html#method-i-rename_table_indexes" class="query"><div class="wrap wide bg-sev-lt pd-lt-m th-sm"
+
+
+      >
+        rename_table_indexes
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/ConnectionAdapters/SchemaStatements.html#method-i-table_alias_for" class="query"><div class="wrap wide bg-sev-lt pd-lt-m th-sm"
+
+
+      >
+        table_alias_for?
+      </div></a></li>
+
+
+      <a href="http://api.rubyonrails.org/classes/ActiveRecord/ConnectionAdapters/SchemaStatements.html#method-i-table_exists-3F" class="query"><div class="wrap wide bg-sev-lt pd-lt-m th-sm"
+
+        style="padding-bottom: .3em;"
+      >
+        table_exists?
+      </div></a></li>
+
+
+
+  </article>
+
+
     </div>
-  </div>
-</footer>
+  <div class="col-1 spacer" id="centering-spacer-r"></div>
+</div>
+
+</div>
 
 </body>
 </html>
