@@ -68,13 +68,13 @@ a { text-decoration  : none;
 .bg-six { background-color: #de5a29; }
 .bg-sev { background-color: #f8ce2e; }
 
-.bg-one-lt { background-color: #fcfcfc; }
-.bg-two-lt { background-color: #fcfcfc; }
-.bg-thr-lt { background-color: #fcfcfc; }
-.bg-fou-lt { background-color: #fcfcfc; }
-.bg-fiv-lt { background-color: #fcfcfc; }
-.bg-six-lt { background-color: #fcfcfc; }
-.bg-sev-lt { background-color: #fcfcfc; }
+.bg-one-lt { background-color: #d0d0d0; }
+.bg-two-lt { background-color: #d0d0d0; }
+.bg-thr-lt { background-color: #d0d0d0; }
+.bg-fou-lt { background-color: #d0d0d0; }
+.bg-fiv-lt { background-color: #d0d0d0; }
+.bg-six-lt { background-color: #d0d0d0; }
+.bg-sev-lt { background-color: #d0d0d0; }
 
 .bg-one-lt:hover { background-color: #3f9a91; }
 .bg-two-lt:hover { background-color: #368cbf; }
